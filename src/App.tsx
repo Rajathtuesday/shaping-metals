@@ -7,6 +7,12 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
+import LandingDemo from "./LandingDemo";
+
+
+
+
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -38,7 +44,7 @@ function App() {
       case 'gallery':
         return <Gallery onNavigate={handleNavigate} />;
       default:
-        return <Home onNavigate={handleNavigate} />;
+        return <LandingDemo  />;
     }
   };
 
