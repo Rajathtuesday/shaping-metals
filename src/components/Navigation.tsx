@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/logo/logo.png";
 
 interface NavbarProps {
   currentPage: string;
@@ -27,6 +28,12 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
+          <img
+            src={logo}
+            alt="Shaping Metals Logo"
+            className="h-14 w-auto object-cover cursor-pointer"
+            onClick={() => handleClick("home")}
+          />
           <h1
             onClick={() => handleClick("home")}
             className="text-white font-serif text-2xl font-bold cursor-pointer"

@@ -1,3 +1,4 @@
+// src/pages/Gallery.tsx
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -13,17 +14,17 @@ const categories = [
     description: "Majestic entrance gates crafted with precision",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+        src: "src\assets\images\main_door\img1.jpg",
         title: "Grand Palace Gate",
         location: "Hyderabad",
       },
       {
-        src: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1200&q=80",
+        src: "src\assets\images\main_door\img2.jpg",
         title: "Heritage Mansion Entry",
         location: "Bangalore",
       },
       {
-        src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+        src: "src\assets\images\main_door\img3.jpg",
         title: "Victorian Style Gate",
         location: "Chennai",
       },

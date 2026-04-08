@@ -137,17 +137,17 @@ Recent Installations
 <div className="grid md:grid-cols-3 gap-6">
 
 <img
-src="https://imgs.search.brave.com/DQMU__8kYtcdQhfvc7c0sspHxx9u4oFcyZ2bxXkaR0E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90bGdk/b29ycy5jb20vd3At/Y29udGVudC91cGxv/YWRzL1MwMzMtMzMt/Q3VzdG9tLVN0ZWVs/LUlyb24tRG9vci1G/YXV4LUZpbmlzaC1D/bGF2b3MtU2Nyb2xs/aW5nLVRleHR1cmVk/LUdsYXNzLmpwZw"
+src="src\assets\images\main_door\img1.jpg"
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src="https://imgs.search.brave.com/MXt45FJDkUSKvY-FwCNgkB5ndblh1bf2yxgAAMfdciI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9kb29y/ZGVzaWdubGFiLmNv/bS9tZWRpYS9jYXRh/bG9nL3Byb2R1Y3Qv/Y2FjaGUvMS9zbWFs/bF9pbWFnZS8zNTB4/LzlkZjc4ZWFiMzM1/MjVkMDhkNmU1ZmI4/ZDI3MTM2ZTk1L2Ev/OS9hOV9ibGFja193/aGl0ZV9mcm9zdGVk/X3NpbHZlcl8yXzFf/ZnJvc3RlZF9saGku/anBn"
+src="src\assets\images\wall_murals\img1.JPG"
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src="https://imgs.search.brave.com/PVf4EA855NCdW8_V6WNwMYqilq5cSlQjO64EjqMd_s8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzIwNDQwNTAxL3Iv/aWwvMzNkZjcyLzYy/NDIxMjgyODYvaWxf/MzAweDMwMC42MjQy/MTI4Mjg2X3JtOWIu/anBn"
+src="src\assets\images\main_door\img3.JPG"
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
