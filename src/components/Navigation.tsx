@@ -26,7 +26,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/75 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
 
