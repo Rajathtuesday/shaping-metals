@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
-
-export default function LandingDemo() {
+import img1 from "./assets/images/main_door/img1.jpg";
+import img2 from "./assets/images/wall_murals/img1.jpg";
+import img3 from "./assets/images/main_door/img2.jpg";
+export default function LandingDemo({ onNavigate }:any) {
 
 return (
 
@@ -8,9 +10,9 @@ return (
 
 {/* HERO */}
 
-<section className="h-screen flex items-center justify-center text-center px-6">
+<section className="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-b from-black via-black/90 to-black">
 
-<div className="max-w-3xl">
+<div className="max-w-3xl mx-auto">
 
 <h1 className="text-5xl md:text-6xl font-heading mb-6">
 
@@ -25,14 +27,12 @@ interior designers and premium spaces.
 
 </p>
 
-<a
-href="#contact"
-className="bg-[#C6A46A] text-black px-8 py-4 font-semibold"
+<button
+  onClick={() => onNavigate("home")}
+  className="bg-[#C6A46A] text-black px-8 py-4 font-semibold"
 >
-
-Request Consultation
-
-</a>
+  Enter Website
+</button>
 
 </div>
 
@@ -137,17 +137,17 @@ Recent Installations
 <div className="grid md:grid-cols-3 gap-6">
 
 <img
-src="src\assets\images\main_door\img1.jpg"
+src={img1}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src="src\assets\images\wall_murals\img1.JPG"
+src={img2}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src="src\assets\images\main_door\img3.JPG"
+src={img3}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />

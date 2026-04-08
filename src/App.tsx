@@ -15,11 +15,11 @@ import LandingDemo from "./LandingDemo";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('landing');
 
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.slice(1) || 'home';
+      const hash = window.location.hash.slice(1) || 'landing';
       setCurrentPage(hash);
     };
 
@@ -35,16 +35,26 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'landing':
+        return <LandingDemo onNavigate={handleNavigate} />;
+
+      case 'home':
+        return <Home />;
+
       case 'about':
         return <About />;
+
       case 'projects':
         return <Projects />;
+
       case 'contact':
         return <Contact />;
+
       case 'gallery':
         return <Gallery onNavigate={handleNavigate} />;
+
       default:
-        return <LandingDemo  />;
+        return <LandingDemo onNavigate={handleNavigate} />;
     }
   };
 
