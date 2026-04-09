@@ -141,7 +141,7 @@ alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src={img2}
+src={img3}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
