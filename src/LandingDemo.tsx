@@ -1,6 +1,7 @@
 import img1 from "../src/assets/images/main_door/img1.jpg";
 import img3 from "../src/assets/images/main_door/img2.jpg";
-import img2 from "../src/assets/images/wall_murals/img1.jpg";
+import img2 from "../src/assets/images/main_door/img5.jpg";
+
 export default function LandingDemo({ onNavigate }:any) {
 
 return (
