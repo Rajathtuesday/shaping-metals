@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Play } from "lucide-react";
 
+import img1 from "../assets/hero/hero1.jpg";
+import img2 from "../assets/hero/hero2.jpg";
+import img3 from "../assets/hero/hero3.jpg";
 interface HeroProps {
   onNavigate: (page: string) => void;
 }
@@ -9,17 +12,17 @@ const featuredCategories = [
   {
     id: "gates",
     name: "Royal Gates",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+    image: img1,
   },
   {
     id: "railings",
     name: "Elegant Railings",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+    image: img2,
   },
   {
     id: "sculptures",
     name: "Metal Sculptures",
-    image: "https://images.unsplash.com/photo-1600573472591-ee6c8e695481?w=600&q=80",
+    image: img3,
   },
   {
     id: "chandeliers",
@@ -34,19 +37,19 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   const heroSlides = [
     {
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80",
+      image: img1,
       title: "Artistry in Metal",
       subtitle: "Bespoke Creations",
       description: "Where timeless craftsmanship meets contemporary design",
     },
     {
-      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80",
+      image: img2,
       title: "Timeless Elegance",
       subtitle: "Architectural Excellence",
       description: "Transforming spaces with sculptural metal masterpieces",
     },
     {
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+      image: img3,
       title: "Sculpted Luxury",
       subtitle: "Masterful Craftsmanship",
       description: "Heritage techniques refined for modern sophistication",
@@ -306,7 +309,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1920&q=80"
+            src="src/assets/hero_vid/DSC_1648.MOV"
             alt="Showcase"
             className="w-full h-full object-cover"
           />

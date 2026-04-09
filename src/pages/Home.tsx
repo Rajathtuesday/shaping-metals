@@ -6,6 +6,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
+import img1 from "../assets/images/main_door/img1.jpg";
+import img2 from "../assets/images/wall_murals/img1.jpg";
+import img3 from "../assets/images/main_door/img3.jpg";
+import img4 from "../assets/images/main_door/img4.jpg";
+import img5 from "../assets/images/main_door/img5.jpg";
+import img6 from "../assets/images/main_door/img6.jpg";
 interface HomeProps {
   onNavigate: (page: string) => void;
 }
@@ -13,30 +20,30 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
 
 const collections = [
-"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
-"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+img1,
+img2,
+img3
 ];
 
 const projects = [
 {
-image:"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+image:img1,
 title:"Hyderabad | Telangana"
 },
 {
-image:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+image:img2,
 title:"Andhra Pradesh"
 },
 {
-image:"https://images.unsplash.com/photo-1600573472591-ee6c8e695481?w=800&q=80",
+image:img3,
 title:"Bangalore | Karnataka"
 },
 {
-image:"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+image:img4,
 title:"Chennai | Tamil Nadu"
 },
 {
-image:"https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80",
+image:img5,
 title:"Vizag | Andhra Pradesh"
 }
 ];
@@ -118,7 +125,7 @@ className="rounded-lg shadow-xl"
 <div>
 
 <h2 className="text-5xl font-serif mb-6">
-Craftsmanship Since 1989
+Craftsmanship Since 2010
 </h2>
 
 <p className="text-gray-300 text-lg mb-6">
@@ -139,7 +146,7 @@ engineering to create timeless metal masterpieces.
 </section>
 
 
-{/* PROJECTS */}
+{/* PROJECTS
 
 <section className="py-24 bg-[#F5F6F7]">
 
@@ -199,10 +206,10 @@ className="h-[300px] w-full object-cover hover:scale-110 transition duration-700
 
 </div>
 
-</section>
+</section> */}
 
 
-{/* VIDEO SECTION */}
+{/* VIDEO SECTION
 
 <section className="py-24 text-center">
 
@@ -221,7 +228,7 @@ allowFullScreen
 
 </div>
 
-</section>
+</section> */}
 
 
 {/* CTA */}

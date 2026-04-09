@@ -2,6 +2,22 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+import img1 from "../assets/images/main_door/img1.jpg";
+import img2 from "../assets/images/main_door/img2.jpg";
+import img3 from "../assets/images/main_door/img3.jpg";
+import img4 from "../assets/images/main_door/img4.jpg";
+import img5 from "../assets/images/main_door/img5.jpg";
+import img6 from "../assets/images/main_door/img6.jpg";
+import img7 from "../assets/images/main_door/img7.jpg";
+import img8 from "../assets/images/main_door/img8.jpg";
+import img9 from "../assets/images/main_door/img9.jpg";
+import img10 from "../assets/images/main_door/img10.jpg";
+import img11 from "../assets/images/main_door/img2.jpg";
+import img12 from "../assets/images/main_door/img3.jpg";
+import img13 from "../assets/images/main_door/img12.jpg";
+import img14 from "../assets/images/main_door/img1.jpg";
+import img15 from "../assets/images/main_door/img13.jpg";
+import img16 from "../assets/images/main_door/img3.jpg";
 interface GalleryProps {
   onNavigate: (page: string) => void;
   initialCategory?: string;
@@ -14,22 +30,22 @@ const categories = [
     description: "Majestic entrance gates crafted with precision",
     images: [
       {
-        src: "src\assets\images\main_door\img1.jpg",
+        src: img1,
         title: "Grand Palace Gate",
         location: "Hyderabad",
       },
       {
-        src: "src\assets\images\main_door\img2.jpg",
+        src: img2,
         title: "Heritage Mansion Entry",
         location: "Bangalore",
       },
       {
-        src: "src\assets\images\main_door\img3.jpg",
+        src: img3,
         title: "Victorian Style Gate",
         location: "Chennai",
       },
       {
-        src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+        src: img4,
         title: "Modern Royal Gate",
         location: "Mumbai",
       },
@@ -41,22 +57,22 @@ const categories = [
     description: "Sophisticated railings for staircases and balconies",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80",
+        src: img5,
         title: "Spiral Staircase Railing",
         location: "Vizag",
       },
       {
-        src: "https://images.unsplash.com/photo-1600573472591-ee6c8e695481?w=1200&q=80",
+        src: img6,
         title: "Balcony Ornamental Railing",
         location: "Delhi",
       },
       {
-        src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+        src: img7,
         title: "Classic Wrought Iron",
         location: "Kolkata",
       },
       {
-        src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+        src: img8,
         title: "Art Deco Balustrade",
         location: "Pune",
       },
@@ -68,22 +84,22 @@ const categories = [
     description: "Artistic metal sculptures for interiors and gardens",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80",
+        src: img9,
         title: "Abstract Garden Sculpture",
         location: "Jaipur",
       },
       {
-        src: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1200&q=80",
+        src: img10,
         title: "Contemporary Art Piece",
         location: "Ahmedabad",
       },
       {
-        src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80",
+        src: img11,
         title: "Heritage Bronze Work",
         location: "Lucknow",
       },
       {
-        src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+        src: img12,
         title: "Modern Steel Installation",
         location: "Kochi",
       },
@@ -95,22 +111,22 @@ const categories = [
     description: "Luxurious lighting masterpieces",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1200&q=80",
+        src: img13,
         title: "Crystal Metal Chandelier",
         location: "Mysore Palace",
       },
       {
-        src: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80",
+        src: img14,
         title: "Contemporary Pendant",
         location: "Taj Hotel",
       },
       {
-        src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80",
+        src: img15,
         title: "Vintage Brass Chandelier",
         location: "Heritage Haveli",
       },
       {
-        src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=80",
+        src: img16,
         title: "Modern Ring Light",
         location: "IT Park Lobby",
       },
@@ -122,22 +138,22 @@ const categories = [
     description: "Statement entrance doors that command attention",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+        src: img12,
         title: "Carved Metal Door",
         location: "Royal Residence",
       },
       {
-        src: "https://images.unsplash.com/photo-1600573472591-ee6c8e695481?w=1200&q=80",
+        src: img13,
         title: "Pivot Door Design",
         location: "Corporate HQ",
       },
       {
-        src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+        src: img11,
         title: "Heritage Bronze Door",
         location: "Temple Complex",
       },
       {
-        src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+        src: img2,
         title: "Contemporary Steel Entry",
         location: "Villa Project",
       },
@@ -203,7 +219,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       {/* Hero Banner */}
       <section className="relative h-[60vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+          src="src/assets/images/main_door/img8.jpg"
           alt="Royal Gallery"
           className="w-full h-full object-cover"
         />

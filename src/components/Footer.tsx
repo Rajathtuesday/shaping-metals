@@ -46,7 +46,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-gray-400 text-sm">
                 <Phone size={16} className="mt-1 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6362843722</span>
               </li>
               <li className="flex items-start gap-2 text-gray-400 text-sm">
                 <Mail size={16} className="mt-1 flex-shrink-0" />
@@ -54,7 +54,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 Industrial Ave, Design District, NY 10001</span>
+                <span>220/15/1, 5th Cross Rd, 8th Main, 2nd Block, Jaya Nagar East, Jayanagar, Bengaluru, Karnataka 560011</span>
               </li>
             </ul>
           </div>
