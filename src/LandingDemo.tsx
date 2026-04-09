@@ -1,7 +1,6 @@
-import { motion } from "framer-motion"
-import img1 from "./assets/images/main_door/img1.jpg";
-import img2 from "./assets/images/wall_murals/img1.jpg";
-import img3 from "./assets/images/main_door/img2.jpg";
+import img1 from "../assets/images/main_door/img1.jpg";
+import img3 from "../assets/images/main_door/img2.jpg";
+import img2 from "../assets/images/wall_murals/img1.jpg";
 export default function LandingDemo({ onNavigate }:any) {
 
 return (
