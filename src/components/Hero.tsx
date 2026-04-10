@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Play } from "lucide-react";
 
-import img1 from "../assets/hero/hero1.jpg";
-import img2 from "../assets/hero/hero2.jpg";
-import img3 from "../assets/hero/hero3.jpg";
+import img1 from "../assets/images/gates/gate1.jpg";
+import img2 from "../assets/images/railings/railing4.jpg";
+import img3 from "../assets/images/murals/mural2.jpg";
 interface HeroProps {
   onNavigate: (page: string) => void;
 }
@@ -20,14 +20,14 @@ const featuredCategories = [
     image: img2,
   },
   {
-    id: "sculptures",
-    name: "Metal Sculptures",
+    id: "murals",
+    name: "Wall Murals",
     image: img3,
   },
   {
-    id: "chandeliers",
-    name: "Grand Chandeliers",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
+    id: "accessories",
+    name: "Metal Accessories",
+    image: img1,
   },
 ];
 
@@ -309,7 +309,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="src/assets/hero_vid/DSC_1648.MOV"
+            src={img1}
             alt="Showcase"
             className="w-full h-full object-cover"
           />
@@ -409,7 +409,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="md:col-span-2 md:row-span-2 group relative overflow-hidden cursor-pointer aspect-square md:aspect-auto"
             >
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                src={img2}
                 alt="Featured Work"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -433,7 +433,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="group relative overflow-hidden cursor-pointer aspect-square"
             >
               <img
-                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+                src={img3}
                 alt="Staircase Railing"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -453,7 +453,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="group relative overflow-hidden cursor-pointer aspect-square"
             >
               <img
-                src="https://images.unsplash.com/photo-1600573472591-ee6c8e695481?w=800&q=80"
+                src={img1}
                 alt="Metal Sculpture"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />

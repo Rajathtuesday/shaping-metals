@@ -1,95 +1,78 @@
 import { useState } from 'react';
 
-export default function Projects() {
+import proj1 from '../assets/images/projects/proj1.jpg';
+import proj2 from '../assets/images/projects/proj2.jpg';
+import proj3 from '../assets/images/projects/proj3.jpg';
+import proj4 from '../assets/images/projects/proj4.jpg';
+import proj5 from '../assets/images/projects/proj5.jpg';
+import proj6 from '../assets/images/projects/proj6.jpg';
+import proj7 from '../assets/images/projects/proj7.jpg';
+import proj8 from '../assets/images/projects/proj8.jpg';
+import proj9 from '../assets/images/projects/proj9.jpg';
+import proj10 from '../assets/images/projects/proj10.jpg';
+import proj11 from '../assets/images/projects/proj11.jpg';
+import proj12 from '../assets/images/projects/proj12.jpg';
+
+import gate1 from '../assets/images/gates/gate1.jpg';
+import gate2 from '../assets/images/gates/gate2.jpg';
+import gate3 from '../assets/images/gates/gate3.jpg';
+import gate5 from '../assets/images/gates/gate5.jpg';
+import gate6 from '../assets/images/gates/gate6.jpg';
+import gate7 from '../assets/images/gates/gate7.jpg';
+
+import railing1 from '../assets/images/railings/railing1.jpg';
+import railing3 from '../assets/images/railings/railing3.jpg';
+import railing4 from '../assets/images/railings/railing4.jpg';
+import railing5 from '../assets/images/railings/railing5.jpg';
+
+import mural1 from '../assets/images/murals/mural1.jpg';
+import mural2 from '../assets/images/murals/mural2.jpg';
+import mural3 from '../assets/images/murals/mural3.jpg';
+import mural4 from '../assets/images/murals/mural4.jpg';
+
+import acc1 from '../assets/images/accessories/acc1.jpg';
+import acc2 from '../assets/images/accessories/acc2.jpg';
+import acc5 from '../assets/images/accessories/acc5.jpg';
+
+interface ProjectsProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function Projects({ onNavigate }: ProjectsProps) {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const categories = ['all', 'sculptures', 'murals', 'grills', 'gates', 'installations'];
+  const categories = ['all', 'gates', 'railings', 'murals', 'accessories', 'installations'];
 
   const projects = [
-    {
-      id: 1,
-      image: 'https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Corporate Atrium Sculpture',
-      category: 'sculptures',
-      description: 'Sweeping stainless steel installation',
-    },
-    {
-      id: 2,
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Estate Entry Gates',
-      category: 'gates',
-      description: 'Bronze and steel custom gates',
-    },
-    {
-      id: 3,
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Modern Art Installation',
-      category: 'installations',
-      description: 'Geometric metal art piece',
-    },
-    {
-      id: 4,
-      image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Architectural Wall Mural',
-      category: 'murals',
-      description: 'Textured copper wall feature',
-    },
-    {
-      id: 5,
-      image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Security Grillwork',
-      category: 'grills',
-      description: 'Decorative steel security grills',
-    },
-    {
-      id: 6,
-      image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Abstract Garden Sculpture',
-      category: 'sculptures',
-      description: 'Weathered steel outdoor art',
-    },
-    {
-      id: 7,
-      image: 'https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Lobby Feature Wall',
-      category: 'murals',
-      description: 'Brushed aluminum relief panels',
-    },
-    {
-      id: 8,
-      image: 'https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Heritage Gate Restoration',
-      category: 'gates',
-      description: 'Wrought iron restoration project',
-    },
-    {
-      id: 9,
-      image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Public Art Installation',
-      category: 'installations',
-      description: 'Large-scale civic sculpture',
-    },
-    {
-      id: 10,
-      image: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Window Grills',
-      category: 'grills',
-      description: 'Contemporary security design',
-    },
-    {
-      id: 11,
-      image: 'https://images.pexels.com/photos/1571452/pexels-photo-1571452.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Kinetic Sculpture',
-      category: 'sculptures',
-      description: 'Moving metal art piece',
-    },
-    {
-      id: 12,
-      image: 'https://images.pexels.com/photos/2219023/pexels-photo-2219023.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      title: 'Plaza Installation',
-      category: 'installations',
-      description: 'Interactive urban sculpture',
-    },
+    { id: 1, image: gate1, title: 'Grand Main Door', category: 'gates', description: 'Premium steel main door with ornamental detailing — Hyderabad' },
+    { id: 2, image: gate2, title: 'Heritage Entrance Gate', category: 'gates', description: 'Classic wrought iron gate with custom panels — Bangalore' },
+    { id: 3, image: gate3, title: 'Steel Entry Gate', category: 'gates', description: 'Precision-crafted steel gate for a luxury villa — Chennai' },
+    { id: 4, image: gate5, title: 'Ornamental Main Door', category: 'gates', description: 'Hand-forged ornamental main door — Hyderabad' },
+    { id: 5, image: gate6, title: 'Designer Entry Gate', category: 'gates', description: 'Contemporary designer gate for a modern home — Vizag' },
+    { id: 6, image: gate7, title: 'Premium Wrought Gate', category: 'gates', description: 'Premium wrought iron gate with gold finish trims — Pune' },
+    { id: 7, image: railing1, title: 'Ornamental Staircase Railing', category: 'railings', description: 'Elegant ornamental railing for a grand staircase — Hyderabad' },
+    { id: 8, image: railing3, title: 'Classic Wrought Iron Railing', category: 'railings', description: 'Traditional wrought iron balustrade — Delhi' },
+    { id: 9, image: railing4, title: 'Premium Steel Balustrade', category: 'railings', description: 'Modern steel balustrade for a duplex apartment — Mumbai' },
+    { id: 10, image: railing5, title: 'Designer Handle Collection', category: 'railings', description: 'Custom-designed handle collection — Chennai' },
+    { id: 11, image: mural1, title: 'Nature Inspired Wall Mural', category: 'murals', description: 'Hand-crafted metal mural with nature motifs — Hyderabad' },
+    { id: 12, image: mural2, title: 'Heritage Metal Artwork', category: 'murals', description: 'Intricate heritage artwork panel — Bangalore' },
+    { id: 13, image: mural3, title: 'Abstract Metal Mural', category: 'murals', description: 'Contemporary abstract mural for a corporate lobby — Mumbai' },
+    { id: 14, image: mural4, title: 'Textured Bronze Mural', category: 'murals', description: 'Textured bronze feature wall — Chennai' },
+    { id: 15, image: acc1, title: 'Designer Metal Accessory', category: 'accessories', description: 'Statement metal accessory for interior spaces — Hyderabad' },
+    { id: 16, image: acc2, title: 'Premium Metal Accent', category: 'accessories', description: 'Premium metal accent piece — Bangalore' },
+    { id: 17, image: acc5, title: 'Statement Metal Piece', category: 'accessories', description: 'Bespoke statement metalwork piece — Mumbai' },
+    { id: 18, image: proj1, title: 'Residential Villa Gate', category: 'installations', description: 'Complete gate installation for a luxury villa — Hyderabad' },
+    { id: 19, image: proj2, title: 'Heritage Bungalow Entry', category: 'installations', description: 'Heritage-style entry work for a classic bungalow — Bangalore' },
+    { id: 20, image: proj3, title: 'Estate Installation', category: 'installations', description: 'Full estate metalwork installation — Chennai' },
+    { id: 21, image: proj4, title: 'Corporate Feature Work', category: 'installations', description: 'Metal feature work for a corporate campus — Mumbai' },
+    { id: 22, image: proj5, title: 'Premium Residence', category: 'installations', description: 'End-to-end metalwork for a premium residence — Hyderabad' },
+    { id: 23, image: proj6, title: 'Luxury Apartment', category: 'installations', description: 'Custom metalwork for a luxury high-rise apartment — Pune' },
+    { id: 24, image: proj7, title: 'Commercial Installation', category: 'installations', description: 'Commercial space metal installation — Delhi' },
+    { id: 25, image: proj8, title: 'Site Metalwork', category: 'installations', description: 'On-site premium metalwork project — Vizag' },
+    { id: 26, image: proj9, title: 'Bespoke Project', category: 'installations', description: 'Fully bespoke metal fabrication — Kolkata' },
+    { id: 27, image: proj10, title: 'Landmark Installation', category: 'installations', description: 'Landmark metalwork piece for a prestigious client' },
+    { id: 28, image: proj11, title: 'Signature Work', category: 'installations', description: 'Signature project completed with master craftsmen' },
+    { id: 29, image: proj12, title: 'Architectural Metal Feature', category: 'installations', description: 'Architectural metal feature for a boutique hotel' },
   ];
 
   const filteredProjects = activeCategory === 'all'
@@ -105,7 +88,7 @@ export default function Projects() {
               Our Portfolio
             </h1>
             <p className="text-xl text-gray-600">
-              Discover our collection of bespoke metalwork projects
+              Discover our collection of bespoke metalwork projects crafted across India
             </p>
           </div>
 
@@ -135,7 +118,7 @@ export default function Projects() {
                 key={project.id}
                 className="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -160,9 +143,7 @@ export default function Projects() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-gray-500 text-lg">
-                No projects found in this category.
-              </p>
+              <p className="text-gray-500 text-lg">No projects found in this category.</p>
             </div>
           )}
         </div>
@@ -176,6 +157,14 @@ export default function Projects() {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how we can bring your vision to life with exceptional metalwork craftsmanship.
           </p>
+          {onNavigate && (
+            <button
+              onClick={() => onNavigate('contact')}
+              className="bg-[#C9A45C] text-white px-10 py-4 text-sm font-semibold uppercase tracking-wider hover:bg-[#B8934B] transition-colors"
+            >
+              Get In Touch
+            </button>
+          )}
         </div>
       </section>
     </div>

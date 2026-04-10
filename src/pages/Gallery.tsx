@@ -1,23 +1,48 @@
-// src/pages/Gallery.tsx
+import img1 from "../assets/images/gates/gate1.jpg";
+import img2 from "../assets/images/gates/gate2.jpg";
+import img3 from "../assets/images/gates/gate3.jpg";
+import img4 from "../assets/images/gates/gate4.jpg";
+import img5 from "../assets/images/gates/gate5.jpg";
+import img6 from "../assets/images/gates/gate6.jpg";
+import img7 from "../assets/images/gates/gate7.jpg";
+import img8 from "../assets/images/gates/gate8.jpg";
+import img9 from "../assets/images/gates/gate9.jpg";
+import img10 from "../assets/images/gates/gate10.jpg";
+import img11 from "../assets/images/gates/gate11.jpg";
+import img12 from "../assets/images/gates/gate12.jpg";
+import railing1 from "../assets/images/railings/railing1.jpg";
+import railing2 from "../assets/images/railings/railing2.jpg";
+import railing3 from "../assets/images/railings/railing3.jpg";
+import railing4 from "../assets/images/railings/railing4.jpg";
+import railing5 from "../assets/images/railings/railing5.jpg";
+import railing6 from "../assets/images/railings/railing6.jpg";
+import railing7 from "../assets/images/railings/railing7.jpg";
+import railing8 from "../assets/images/railings/railing8.jpg";
+import mural1 from "../assets/images/murals/mural1.jpg";
+import mural2 from "../assets/images/murals/mural2.jpg";
+import mural3 from "../assets/images/murals/mural3.jpg";
+import mural4 from "../assets/images/murals/mural4.jpg";
+import mural5 from "../assets/images/murals/mural5.jpg";
+import mural6 from "../assets/images/murals/mural6.jpg";
+import acc1 from "../assets/images/accessories/acc1.jpg";
+import acc2 from "../assets/images/accessories/acc2.jpg";
+import acc3 from "../assets/images/accessories/acc3.jpg";
+import acc4 from "../assets/images/accessories/acc4.jpg";
+import acc5 from "../assets/images/accessories/acc5.jpg";
+import acc6 from "../assets/images/accessories/acc6.jpg";
+import acc7 from "../assets/images/accessories/acc7.jpg";
+import acc8 from "../assets/images/accessories/acc8.jpg";
+import proj1 from "../assets/images/projects/proj1.jpg";
+import proj2 from "../assets/images/projects/proj2.jpg";
+import proj3 from "../assets/images/projects/proj3.jpg";
+import proj4 from "../assets/images/projects/proj4.jpg";
+import proj5 from "../assets/images/projects/proj5.jpg";
+import proj6 from "../assets/images/projects/proj6.jpg";
+import proj7 from "../assets/images/projects/proj7.jpg";
+import proj8 from "../assets/images/projects/proj8.jpg";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-import img1 from "../assets/images/main_door/img1.jpg";
-import img2 from "../assets/images/main_door/img2.jpg";
-import img3 from "../assets/images/main_door/img3.jpg";
-import img4 from "../assets/images/main_door/img4.jpg";
-import img5 from "../assets/images/main_door/img5.jpg";
-import img6 from "../assets/images/main_door/img6.jpg";
-import img7 from "../assets/images/main_door/img7.jpg";
-import img8 from "../assets/images/main_door/img8.jpg";
-import img9 from "../assets/images/main_door/img9.jpg";
-import img10 from "../assets/images/main_door/img10.jpg";
-import img11 from "../assets/images/main_door/img2.jpg";
-import img12 from "../assets/images/main_door/img3.jpg";
-import img13 from "../assets/images/main_door/img12.jpg";
-import img14 from "../assets/images/main_door/img1.jpg";
-import img15 from "../assets/images/main_door/img13.jpg";
-import img16 from "../assets/images/main_door/img3.jpg";
 interface GalleryProps {
   onNavigate: (page: string) => void;
   initialCategory?: string;
@@ -26,164 +51,79 @@ interface GalleryProps {
 const categories = [
   {
     id: "gates",
-    name: "Royal Gates",
-    description: "Majestic entrance gates crafted with precision",
+    name: "Royal Gates & Main Doors",
+    description: "Majestic entrance gates and main doors crafted with precision metalwork",
     images: [
-      {
-        src: img1,
-        title: "Grand Palace Gate",
-        location: "Hyderabad",
-      },
-      {
-        src: img2,
-        title: "Heritage Mansion Entry",
-        location: "Bangalore",
-      },
-      {
-        src: img3,
-        title: "Victorian Style Gate",
-        location: "Chennai",
-      },
-      {
-        src: img4,
-        title: "Modern Royal Gate",
-        location: "Mumbai",
-      },
+      { src: img1, title: "Grand Main Door", location: "Hyderabad" },
+      { src: img2, title: "Heritage Entrance Door", location: "Bangalore" },
+      { src: img3, title: "Classic Steel Gate", location: "Chennai" },
+      { src: img4, title: "Full-Panel Royal Gate", location: "Mumbai" },
+      { src: img5, title: "Ornamental Main Door", location: "Hyderabad" },
+      { src: img6, title: "Designer Entry Gate", location: "Vizag" },
+      { src: img7, title: "Premium Wrought Gate", location: "Pune" },
+      { src: img8, title: "Steel Artisan Door", location: "Delhi" },
+      { src: img9, title: "Arc Designed Entry", location: "Bangalore" },
+      { src: img10, title: "Luxury Main Door", location: "Hyderabad" },
+      { src: img11, title: "Heritage Gate Design", location: "Chennai" },
+      { src: img12, title: "Premium Gate Series", location: "Mumbai" },
     ],
   },
   {
     id: "railings",
-    name: "Elegant Railings",
-    description: "Sophisticated railings for staircases and balconies",
+    name: "Elegant Railings & Handles",
+    description: "Sophisticated railings, handles and balustrades for staircases and balconies",
     images: [
-      {
-        src: img5,
-        title: "Spiral Staircase Railing",
-        location: "Vizag",
-      },
-      {
-        src: img6,
-        title: "Balcony Ornamental Railing",
-        location: "Delhi",
-      },
-      {
-        src: img7,
-        title: "Classic Wrought Iron",
-        location: "Kolkata",
-      },
-      {
-        src: img8,
-        title: "Art Deco Balustrade",
-        location: "Pune",
-      },
+      { src: railing1, title: "Ornamental Staircase Railing", location: "Hyderabad" },
+      { src: railing2, title: "Minimalist Handle Series", location: "Bangalore" },
+      { src: railing3, title: "Classic Wrought Iron Railing", location: "Delhi" },
+      { src: railing4, title: "Premium Steel Balustrade", location: "Mumbai" },
+      { src: railing5, title: "Designer Handle Collection", location: "Chennai" },
+      { src: railing6, title: "Ornate Balcony Railing", location: "Pune" },
+      { src: railing7, title: "Modern Stair Railing", location: "Vizag" },
+      { src: railing8, title: "Art Deco Railing", location: "Kolkata" },
     ],
   },
   {
-    id: "sculptures",
-    name: "Metal Sculptures",
-    description: "Artistic metal sculptures for interiors and gardens",
+    id: "murals",
+    name: "Wall Murals",
+    description: "Artistic metal wall murals that transform interiors into stunning art spaces",
     images: [
-      {
-        src: img9,
-        title: "Abstract Garden Sculpture",
-        location: "Jaipur",
-      },
-      {
-        src: img10,
-        title: "Contemporary Art Piece",
-        location: "Ahmedabad",
-      },
-      {
-        src: img11,
-        title: "Heritage Bronze Work",
-        location: "Lucknow",
-      },
-      {
-        src: img12,
-        title: "Modern Steel Installation",
-        location: "Kochi",
-      },
+      { src: mural1, title: "Nature Inspired Wall Mural", location: "Hyderabad" },
+      { src: mural2, title: "Heritage Metal Artwork", location: "Bangalore" },
+      { src: mural3, title: "Abstract Metal Mural", location: "Mumbai" },
+      { src: mural4, title: "Textured Bronze Mural", location: "Chennai" },
+      { src: mural5, title: "Contemporary Relief Panel", location: "Delhi" },
+      { src: mural6, title: "Copper Feature Wall", location: "Hyderabad" },
     ],
   },
   {
-    id: "chandeliers",
-    name: "Grand Chandeliers",
-    description: "Luxurious lighting masterpieces",
+    id: "accessories",
+    name: "Metal Accessories",
+    description: "Bespoke decorative metal accessories and statement pieces",
     images: [
-      {
-        src: img13,
-        title: "Crystal Metal Chandelier",
-        location: "Mysore Palace",
-      },
-      {
-        src: img14,
-        title: "Contemporary Pendant",
-        location: "Taj Hotel",
-      },
-      {
-        src: img15,
-        title: "Vintage Brass Chandelier",
-        location: "Heritage Haveli",
-      },
-      {
-        src: img16,
-        title: "Modern Ring Light",
-        location: "IT Park Lobby",
-      },
+      { src: acc1, title: "Designer Metal Accessory", location: "Hyderabad" },
+      { src: acc2, title: "Premium Metal Accent", location: "Bangalore" },
+      { src: acc3, title: "Ornamental Piece", location: "Mumbai" },
+      { src: acc4, title: "Handcrafted Accent", location: "Chennai" },
+      { src: acc5, title: "Statement Metal Work", location: "Pune" },
+      { src: acc6, title: "Decorative Element", location: "Delhi" },
+      { src: acc7, title: "Metal Craft Piece", location: "Vizag" },
+      { src: acc8, title: "Artisan Accessory", location: "Kolkata" },
     ],
   },
   {
-    id: "doors",
-    name: "Designer Doors",
-    description: "Statement entrance doors that command attention",
+    id: "projects",
+    name: "Project Installations",
+    description: "Premium completed installations across landmark residences and commercial spaces",
     images: [
-      {
-        src: img12,
-        title: "Carved Metal Door",
-        location: "Royal Residence",
-      },
-      {
-        src: img13,
-        title: "Pivot Door Design",
-        location: "Corporate HQ",
-      },
-      {
-        src: img11,
-        title: "Heritage Bronze Door",
-        location: "Temple Complex",
-      },
-      {
-        src: img2,
-        title: "Contemporary Steel Entry",
-        location: "Villa Project",
-      },
-    ],
-  },
-  {
-    id: "furniture",
-    name: "Metal Furniture",
-    description: "Bespoke metal furniture pieces",
-    images: [
-      {
-        src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1200&q=80",
-        title: "Wrought Iron Table",
-        location: "Boutique Hotel",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80",
-        title: "Metal Console Design",
-        location: "Penthouse",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
-        title: "Outdoor Seating",
-        location: "Resort Garden",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80",
-        title: "Decorative Shelf Unit",
-        location: "Luxury Store",
-      },
+      { src: proj1, title: "Residential Villa Gate", location: "Hyderabad" },
+      { src: proj2, title: "Heritage Bungalow Entry", location: "Bangalore" },
+      { src: proj3, title: "Estate Installation", location: "Chennai" },
+      { src: proj4, title: "Corporate Lobby Feature", location: "Mumbai" },
+      { src: proj5, title: "Premium Residence Project", location: "Hyderabad" },
+      { src: proj6, title: "Luxury Apartment Work", location: "Pune" },
+      { src: proj7, title: "Commercial Installation", location: "Delhi" },
+      { src: proj8, title: "Site Metalwork", location: "Vizag" },
     ],
   },
 ];
@@ -200,19 +140,15 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
     setLightboxOpen(true);
   };
 
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-  };
+  const closeLightbox = () => setLightboxOpen(false);
 
-  const nextImage = () => {
+  const nextImage = () =>
     setLightboxIndex((prev) => (prev + 1) % currentCategory.images.length);
-  };
 
-  const prevImage = () => {
+  const prevImage = () =>
     setLightboxIndex(
       (prev) => (prev - 1 + currentCategory.images.length) % currentCategory.images.length
     );
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -236,7 +172,6 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
             each piece telling a story of timeless elegance and superior craftsmanship
           </p>
         </div>
-        {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
@@ -279,7 +214,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       {/* Gallery Grid */}
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentCategory.images.map((image, index) => (
               <div
                 key={index}
@@ -296,11 +231,8 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
                   <p className="text-primary-gold text-xs uppercase tracking-[0.3em] mb-2 font-sans">
                     {image.location}
                   </p>
-                  <h3 className="text-white font-serif text-2xl">
-                    {image.title}
-                  </h3>
+                  <h3 className="text-white font-serif text-2xl">{image.title}</h3>
                 </div>
-                {/* Corner Decorations */}
                 <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-white/0 group-hover:border-primary-gold transition-all duration-500" />
                 <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-white/0 group-hover:border-primary-gold transition-all duration-500" />
               </div>
@@ -394,7 +326,6 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
             <ChevronRight size={48} />
           </button>
 
-          {/* Thumbnails */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
             {currentCategory.images.map((_, index) => (
               <button

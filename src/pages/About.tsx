@@ -1,4 +1,10 @@
 import { Target, Users, Lightbulb, Hammer } from 'lucide-react';
+import heroImg from '../assets/images/gates/gate9.jpg';
+import storyImg from '../assets/images/gates/gate10.jpg';
+import craft1 from '../assets/images/railings/railing4.jpg';
+import craft2 from '../assets/images/murals/mural2.jpg';
+import about1 from '../assets/images/about/about2.jpg';
+import about2 from '../assets/images/about/about4.jpg';
 
 export default function About() {
   const values = [
@@ -36,7 +42,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src={heroImg}
             alt="About Shaping Metals"
             className="w-full h-full object-cover"
           />
@@ -63,19 +69,19 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Founded in 1998, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication.
+                Founded in 2010, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our journey has been defined by an unwavering commitment to quality and innovation. We've had the privilege of working on landmark architectural projects, from corporate headquarters to luxury residences, each one pushing us to refine our craft further.
+                Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects — from luxury residences in Hyderabad and Bangalore to commercial spaces in Mumbai and Delhi — each one pushing us to refine our craft further.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Today, we combine traditional metalworking techniques with cutting-edge technology, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal—we sculpt, we engineer, we create lasting impressions.
+                Today, we combine traditional metalworking techniques with modern engineering, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal — we sculpt, we engineer, we create lasting impressions.
               </p>
             </div>
 
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={storyImg}
                 alt="Workshop"
                 className="w-full h-[500px] object-cover shadow-2xl"
               />
@@ -127,12 +133,12 @@ export default function About() {
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-6">
                 <img
-                  src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={craft1}
                   alt="Craftsmanship 1"
                   className="w-full h-72 object-cover shadow-lg"
                 />
                 <img
-                  src="https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={craft2}
                   alt="Craftsmanship 2"
                   className="w-full h-72 object-cover shadow-lg mt-8"
                 />
@@ -144,10 +150,10 @@ export default function About() {
                 Expertise That Defines Excellence
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our team brings together diverse specializations—from structural engineers to fine artists, welders to polishers—each contributing their mastery to create pieces that are both structurally sound and visually stunning.
+                Our team brings together diverse specializations — from structural engineers to fine artists, welders to polishers — each contributing their mastery to create pieces that are both structurally sound and visually stunning.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                We work with a wide range of metals including stainless steel, bronze, copper, aluminum, and specialty alloys. Our state-of-the-art facility is equipped with precision CNC machinery, plasma cutters, and traditional forging equipment, giving us the versatility to execute any design.
+                We work with a wide range of metals including stainless steel, wrought iron, brass, copper, and specialty alloys. Our state-of-the-art facility is equipped with precision CNC machinery, plasma cutters, and traditional forging equipment, giving us the versatility to execute any design.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {expertise.map((item, index) => (
@@ -162,6 +168,27 @@ export default function About() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Workshop Photo Feature */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-serif font-bold text-[#1E2A38] text-center mb-12">
+            Our Installations
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <img
+              src={about1}
+              alt="Installation 1"
+              className="w-full h-[400px] object-cover shadow-xl"
+            />
+            <img
+              src={about2}
+              alt="Installation 2"
+              className="w-full h-[400px] object-cover shadow-xl"
+            />
           </div>
         </div>
       </section>

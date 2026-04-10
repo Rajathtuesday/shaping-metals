@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Send } from 'lucide-react';
+import contactHero from '../assets/images/gates/gate11.jpg';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ export default function Contact() {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src={contactHero}
             alt="Contact Us"
             className="w-full h-full object-cover"
           />
@@ -81,8 +82,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1E2A38] mb-1">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Fri 8am-6pm EST</p>
+                    <p className="text-gray-600">+91 98480 00000</p>
+                    <p className="text-sm text-gray-500">Mon-Sat 9am-7pm IST</p>
                   </div>
                 </div>
 
@@ -103,8 +104,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1E2A38] mb-1">Studio</h3>
-                    <p className="text-gray-600">123 Industrial Avenue</p>
-                    <p className="text-gray-600">Design District, NY 10001</p>
+                    <p className="text-gray-600">Industrial Area, Nacharam</p>
+                    <p className="text-gray-600">Hyderabad, Telangana 500076</p>
                   </div>
                 </div>
               </div>
@@ -249,13 +250,15 @@ export default function Contact() {
       </section>
 
       <section className="h-[400px] bg-gray-200">
-        <div className="w-full h-full flex items-center justify-center text-gray-500">
-          <div className="text-center">
-            <MapPin size={48} className="mx-auto mb-4 text-[#C9A45C]" />
-            <p className="font-semibold">Map Location</p>
-            <p className="text-sm">123 Industrial Avenue, Design District, NY 10001</p>
-          </div>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.534!2d78.5518!3d17.4065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI0JzIzLjQiTiA3OMKwMzMnMDYuNSJF!5e0!3m2!1sen!2sin!4v1"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          title="Shaping Metals Location"
+        />
       </section>
     </div>
   );

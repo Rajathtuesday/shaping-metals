@@ -1,6 +1,7 @@
-import img1 from "../src/assets/images/main_door/img1.jpg";
-import img3 from "../src/assets/images/main_door/img2.jpg";
-import img5 from "../src/assets/images/main_door/img5.jpg";
+import img1 from "./assets/images/gates/gate1.jpg";
+import img2 from "./assets/images/gates/gate4.jpg";
+import img3 from "./assets/images/murals/mural1.jpg";
+
 export default function LandingDemo({ onNavigate }:any) {
 
 return (
@@ -21,7 +22,7 @@ Luxury Metal Art for Modern Interiors
 <p className="text-gray-400 mb-8">
 
 Custom metal installations crafted for architects,
-interior designers and premium spaces.
+interior designers and premium spaces across India.
 
 </p>
 
@@ -49,7 +50,8 @@ Bespoke Metal Design Studio
 <p className="text-gray-400 max-w-2xl mx-auto">
 
 We design and fabricate architectural metal pieces
-for luxury residences, hotels and commercial interiors.
+for luxury residences, hotels and commercial interiors
+across Hyderabad, Bangalore, Chennai, Mumbai and beyond.
 
 </p>
 
@@ -94,8 +96,8 @@ Premium Materials
 
 <p className="text-gray-400">
 
-We work with brass, stainless steel and
-architectural metals.
+We work with wrought iron, stainless steel, brass and
+premium architectural metals.
 
 </p>
 
@@ -112,7 +114,7 @@ Architect Collaboration
 <p className="text-gray-400">
 
 We collaborate with interior designers and architects
-across India.
+across South India and beyond.
 
 </p>
 
@@ -136,17 +138,17 @@ Recent Installations
 
 <img
 src={img1}
-alt="Metal Art Installation"
+alt="Premium Main Door"
+className="w-full h-72 object-cover"
+/>
+<img
+src={img2}
+alt="Royal Gate Installation"
 className="w-full h-72 object-cover"
 />
 <img
 src={img3}
-alt="Metal Art Installation"
-className="w-full h-72 object-cover"
-/>
-<img
-src={img5}
-alt="Metal Art Installation"
+alt="Wall Mural Artwork"
 className="w-full h-72 object-cover"
 />
 
@@ -183,10 +185,13 @@ className="p-4 bg-[#222]"
 <select className="p-4 bg-[#222]">
 
 <option>Select City</option>
+<option>Hyderabad</option>
 <option>Bangalore</option>
+<option>Chennai</option>
 <option>Mumbai</option>
 <option>Delhi</option>
-<option>Hyderabad</option>
+<option>Vizag</option>
+<option>Pune</option>
 
 </select>
 
@@ -213,7 +218,7 @@ Submit Enquiry
 
 <footer className="py-12 text-center text-gray-500">
 
-© 2026 Shaping Metals
+© 2026 Shaping Metals. Hyderabad, India.
 
 </footer>
 
