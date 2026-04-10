@@ -1,7 +1,6 @@
 import img1 from "../src/assets/images/main_door/img1.jpg";
 import img3 from "../src/assets/images/main_door/img2.jpg";
-import img2 from "./img2.jpg";
-
+import img5 from "../src/assets/images/main_door/img5.jpg";
 export default function LandingDemo({ onNavigate }:any) {
 
 return (
@@ -141,12 +140,12 @@ alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src={img2}
+src={img3}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />
 <img
-src="https://via.placeholder.com/400"
+src={img5}
 alt="Metal Art Installation"
 className="w-full h-72 object-cover"
 />

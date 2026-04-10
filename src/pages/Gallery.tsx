@@ -219,7 +219,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       {/* Hero Banner */}
       <section className="relative h-[60vh] overflow-hidden">
         <img
-          src="src/assets/images/main_door/img8.jpg"
+          src={img8}
           alt="Royal Gallery"
           className="w-full h-full object-cover"
         />
