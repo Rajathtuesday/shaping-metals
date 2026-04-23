@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Send } from 'lucide-react';
 import contactHero from '../assets/images/gates/gate11.jpg';
 
-export default function Contact() {
+interface ContactProps {
+  onNavigate: (page: string) => void;
+}
+
+export default function Contact({ onNavigate }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,7 +59,7 @@ export default function Contact() {
         </div>
 
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4">
+          <h1 className="text-3xl md:text-6xl font-serif font-bold mb-4">
             Let's <span className="text-[#C9A45C]">Connect</span>
           </h1>
           <p className="text-xl text-gray-200">
@@ -64,11 +68,11 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#F5F6F7]">
+      <section className="py-12 md:py-24 bg-[#F5F6F7]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-serif font-bold text-[#1E2A38] mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A38] mb-6">
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">

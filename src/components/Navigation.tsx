@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/logo/logo.png";
 
 interface NavbarProps {
@@ -7,61 +8,41 @@ interface NavbarProps {
 }
 
 export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
-  const [active, setActive] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
 
-  const leftMenu = [
+  const menuItems = [
     { name: "Home", page: "home" },
     { name: "Gallery", page: "gallery" },
-  ];
-
-  const rightMenu = [
     { name: "Projects", page: "projects" },
     { name: "About", page: "about" },
     { name: "Contact", page: "contact" },
   ];
 
   const handleClick = (page: string) => {
-    setActive(page);
     onNavigate(page);
+    setIsOpen(false);
   };
 
   return (
     <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/75 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-
-          {/* LEFT MENU */}
-          <div className="flex gap-8">
-            {leftMenu.map((item) => (
-              <button
-                key={item.page}
-                onClick={() => handleClick(item.page)}
-                className={`text-sm uppercase tracking-wider ${
-                  currentPage === item.page
-                    ? "text-[#C9A45C]"
-                    : "text-white hover:text-[#C9A45C]"
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-
-          {/* CENTER LOGO */}
+          
+          {/* LOGO - ALWAYS VISIBLE */}
           <img
             src={logo}
             alt="logo"
-            className="h-16 object-contain cursor-pointer"
+            className="h-12 md:h-16 object-contain cursor-pointer"
             onClick={() => handleClick("home")}
           />
 
-          {/* RIGHT MENU */}
-          <div className="flex gap-8">
-            {rightMenu.map((item) => (
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex items-center gap-8">
+            {menuItems.map((item) => (
               <button
                 key={item.page}
                 onClick={() => handleClick(item.page)}
-                className={`text-sm uppercase tracking-wider ${
+                className={`text-sm uppercase tracking-wider transition-colors ${
                   currentPage === item.page
                     ? "text-[#C9A45C]"
                     : "text-white hover:text-[#C9A45C]"
@@ -72,6 +53,38 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             ))}
           </div>
 
+          {/* MOBILE MENU BUTTON */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white p-2"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* MOBILE MENU OVERLAY */}
+      <div
+        className={`md:hidden absolute top-20 left-0 w-full bg-black/95 border-b border-white/10 transition-all duration-300 ${
+          isOpen ? "opacity-100 visible h-auto py-8" : "opacity-0 invisible h-0 overflow-hidden"
+        }`}
+      >
+        <div className="flex flex-col items-center gap-6">
+          {menuItems.map((item) => (
+            <button
+              key={item.page}
+              onClick={() => handleClick(item.page)}
+              className={`text-base uppercase tracking-widest ${
+                currentPage === item.page
+                  ? "text-[#C9A45C]"
+                  : "text-white hover:text-[#C9A45C]"
+              }`}
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
       </div>
     </nav>

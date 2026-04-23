@@ -6,7 +6,11 @@ import craft2 from '../assets/images/murals/mural2.jpg';
 import about1 from '../assets/images/about/about2.jpg';
 import about2 from '../assets/images/about/about4.jpg';
 
-export default function About() {
+interface AboutProps {
+  onNavigate: (page: string) => void;
+}
+
+export default function About({ onNavigate }: AboutProps) {
   const values = [
     {
       icon: Target,
@@ -50,7 +54,7 @@ export default function About() {
         </div>
 
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+          <h1 className="text-3xl md:text-6xl font-serif font-bold mb-6">
             Forging the Future of
             <br />
             <span className="text-[#C9A45C]">Architectural Metalwork</span>
@@ -61,11 +65,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#F5F6F7]">
+      <section className="py-12 md:py-24 bg-[#F5F6F7]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -83,7 +87,7 @@ export default function About() {
               <img
                 src={storyImg}
                 alt="Workshop"
-                className="w-full h-[500px] object-cover shadow-2xl"
+                className="w-full h-[300px] md:h-[500px] object-cover shadow-2xl"
               />
               <div className="absolute -bottom-8 -left-8 bg-[#C9A45C] p-8 max-w-xs">
                 <p className="text-white text-2xl font-serif font-bold">
@@ -95,10 +99,10 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-4">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-4">
               Our Philosophy
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -127,7 +131,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#ECEDEF]">
+      <section className="py-12 md:py-24 bg-[#ECEDEF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -146,7 +150,7 @@ export default function About() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
                 Expertise That Defines Excellence
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
@@ -173,9 +177,9 @@ export default function About() {
       </section>
 
       {/* Workshop Photo Feature */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-serif font-bold text-[#1E2A38] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A38] text-center mb-12">
             Our Installations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -193,14 +197,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#1E2A38]">
+      <section className="py-12 md:py-24 bg-[#1E2A38]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
             Let's Create Something Extraordinary
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Whether you're an architect with a bold vision or a homeowner seeking a unique statement piece, we're ready to bring your ideas to life.
-          </p>
+          <button
+            onClick={() => onNavigate("contact")}
+            className="bg-[#C9A45C] px-10 py-4 text-sm uppercase tracking-widest hover:bg-white hover:text-[#1E2A38] transition text-white font-semibold"
+          >
+            Start Your Project
+          </button>
         </div>
       </section>
     </div>

@@ -164,7 +164,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
           <p className="text-primary-gold text-sm uppercase tracking-[0.5em] mb-6 font-sans">
             Exclusive Collection
           </p>
-          <h1 className="text-white font-serif text-5xl md:text-7xl lg:text-8xl font-normal mb-6">
+          <h1 className="text-white font-serif text-3xl md:text-7xl lg:text-8xl font-normal mb-6">
             Royal Gallery
           </h1>
           <p className="text-white/70 text-lg max-w-2xl font-sans font-light">
@@ -197,9 +197,9 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       </section>
 
       {/* Category Header */}
-      <section className="py-16 text-center">
+      <section className="py-10 md:py-16 text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-4xl md:text-5xl text-primary-navy mb-4">
+          <h2 className="font-serif text-3xl md:text-5xl text-primary-navy mb-4">
             {currentCategory.name}
           </h2>
           <p className="text-gray-500 text-lg font-sans font-light">
@@ -242,7 +242,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-primary-navy">
+      <section className="py-12 md:py-20 bg-primary-navy">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -266,12 +266,12 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 text-center">
+      <section className="py-12 md:py-24 text-center">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-primary-gold text-sm uppercase tracking-[0.4em] mb-6 font-sans">
             Commission Your Masterpiece
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-primary-navy mb-6">
+          <h2 className="font-serif text-3xl md:text-5xl text-primary-navy mb-6">
             Ready to Transform Your Space?
           </h2>
           <p className="text-gray-500 text-lg mb-10 font-sans font-light">

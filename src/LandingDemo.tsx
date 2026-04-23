@@ -13,7 +13,7 @@ return (
 
 <div className="max-w-3xl mx-auto">
 
-<h1 className="text-5xl md:text-6xl font-heading mb-6">
+<h1 className="text-3xl md:text-6xl font-heading mb-6">
 
 Luxury Metal Art for Modern Interiors
 
@@ -39,9 +39,9 @@ interior designers and premium spaces across India.
 
 {/* BRAND STATEMENT */}
 
-<section className="py-24 max-w-6xl mx-auto px-6 text-center">
+<section className="py-12 md:py-24 max-w-6xl mx-auto px-6 text-center">
 
-<h2 className="text-4xl font-heading mb-6">
+<h2 className="text-3xl md:text-4xl font-heading mb-6">
 
 Bespoke Metal Design Studio
 
@@ -59,9 +59,9 @@ across Hyderabad, Bangalore, Chennai, Mumbai and beyond.
 
 {/* BENEFITS */}
 
-<section className="py-24 bg-[#111]">
+<section className="py-12 md:py-24 bg-[#111]">
 
-<h2 className="text-4xl font-heading text-center mb-16">
+<h2 className="text-3xl md:text-4xl font-heading text-center mb-16">
 
 Why Work With Us
 
@@ -126,9 +126,9 @@ across South India and beyond.
 
 {/* PROJECT GALLERY */}
 
-<section className="py-24 max-w-6xl mx-auto px-6">
+<section className="py-12 md:py-24 max-w-6xl mx-auto px-6">
 
-<h2 className="text-4xl font-heading text-center mb-16">
+<h2 className="text-3xl md:text-4xl font-heading text-center mb-16">
 
 Recent Installations
 
@@ -158,9 +158,9 @@ className="w-full h-72 object-cover"
 
 {/* CONTACT FORM */}
 
-<section id="contact" className="py-24 bg-[#111]">
+<section id="contact" className="py-12 md:py-24 bg-[#111]">
 
-<h2 className="text-4xl font-heading text-center mb-12">
+<h2 className="text-3xl md:text-4xl font-heading text-center mb-12">
 
 Start Your Project
 

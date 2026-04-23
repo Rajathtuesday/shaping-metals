@@ -7,7 +7,7 @@ interface FooterProps {
 export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#1E2A38] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <h3 className="text-2xl font-serif font-bold mb-4 text-[#C9A45C]">

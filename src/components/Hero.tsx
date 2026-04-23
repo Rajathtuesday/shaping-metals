@@ -130,7 +130,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <div className="overflow-hidden">
               <h1
                 key={current}
-                className="text-white font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal leading-none tracking-tight animate-slide-up"
+                className="text-white font-serif text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-normal leading-none tracking-tight animate-slide-up"
               >
                 {heroSlides[current].title.split(" ").map((word, i) => (
                   <span key={i} className="block">
@@ -168,7 +168,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             >
               <button
                 onClick={() => onNavigate("gallery")}
-                className="group flex items-center gap-4 bg-primary-gold text-primary-navy px-8 py-4 hover:bg-white transition-colors duration-500"
+                className="group flex items-center gap-4 bg-primary-gold text-primary-navy px-6 md:px-8 py-3 md:py-4 hover:bg-white transition-colors duration-500"
               >
                 <span className="text-sm uppercase tracking-[0.2em] font-sans font-medium">
                   View Gallery
@@ -177,7 +177,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               </button>
               <button
                 onClick={() => onNavigate("projects")}
-                className="group flex items-center gap-4 text-white hover:text-primary-gold transition-colors duration-500 border border-white/30 px-8 py-4 hover:border-primary-gold"
+                className="group flex items-center gap-4 text-white hover:text-primary-gold transition-colors duration-500 border border-white/30 px-6 md:px-8 py-3 md:py-4 hover:border-primary-gold"
               >
                 <span className="text-sm uppercase tracking-[0.2em] font-sans font-light">
                   Our Projects
@@ -249,7 +249,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <p className="text-primary-gold text-sm uppercase tracking-[0.4em] mb-4 font-sans">
               Explore Our Collections
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-primary-navy mb-6">
+            <h2 className="font-serif text-3xl md:text-5xl text-primary-navy mb-6">
               Royal Categories
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-sans font-light">
@@ -334,7 +334,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               <p className="text-primary-gold text-sm uppercase tracking-[0.4em] mb-6 font-sans">
                 Our Legacy
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
                 Three Decades of Excellence
               </h2>
               <p className="text-white/70 text-lg font-sans font-light leading-relaxed mb-8">
@@ -398,7 +398,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               <p className="text-primary-gold text-sm uppercase tracking-[0.4em] mb-4 font-sans">
                 Featured Works
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl text-primary-navy">
+              <h2 className="font-serif text-3xl md:text-5xl text-primary-navy">
                 Signature Pieces
               </h2>
             </div>

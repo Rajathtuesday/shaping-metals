@@ -21,7 +21,7 @@ import proj5 from "../assets/images/projects/proj5.jpg";
 import aboutImg from "../assets/images/about/about1.jpg";
 
 interface HomeProps {
-  onNavigate?: (page: string) => void;
+  onNavigate: (page: string) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
@@ -43,9 +43,9 @@ return (
 <Hero onNavigate={onNavigate} />
 
 {/* PREMIUM METAL COLLECTIONS */}
-<section className="py-24">
+<section className="py-12 md:py-24">
 <div className="max-w-7xl mx-auto px-6">
-<h2 className="text-4xl font-serif text-center mb-16">
+<h2 className="text-3xl md:text-4xl font-serif text-center mb-10 md:mb-16">
   Premium Metal Collections
 </h2>
 
@@ -87,7 +87,7 @@ return (
 </section>
 
 {/* ABOUT SECTION */}
-<section className="py-24 bg-[#1E2A38] text-white">
+<section className="py-12 md:py-24 bg-[#1E2A38] text-white">
 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
   <img
@@ -97,7 +97,7 @@ return (
   />
 
   <div>
-    <h2 className="text-5xl font-serif mb-6">
+    <h2 className="text-3xl md:text-5xl font-serif mb-6">
       Craftsmanship Since 2010
     </h2>
     <p className="text-gray-300 text-lg mb-6">
@@ -122,9 +122,9 @@ return (
 </section>
 
 {/* RECENT PROJECTS */}
-<section className="py-24 bg-[#F5F6F7]">
+<section className="py-12 md:py-24 bg-[#F5F6F7]">
 <div className="max-w-7xl mx-auto px-6">
-  <h2 className="text-center text-4xl font-serif mb-16">Recent Projects</h2>
+  <h2 className="text-center text-3xl md:text-4xl font-serif mb-10 md:mb-16">Recent Projects</h2>
 
   <Swiper
     modules={[Autoplay]}
@@ -158,10 +158,10 @@ return (
 </section>
 
 {/* CATALOG SECTION */}
-<section className="py-24 bg-white text-primary-navy">
+<section className="py-12 md:py-24 bg-white text-primary-navy">
 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
   <div>
-    <h2 className="text-5xl font-serif mb-6">
+    <h2 className="text-3xl md:text-5xl font-serif mb-6">
       Download Our Catalog
     </h2>
     <p className="text-gray-600 text-lg mb-8">
@@ -191,8 +191,8 @@ return (
 </section>
 
 {/* CTA */}
-<section className="py-32 bg-[#1E2A38] text-white text-center">
-<h2 className="text-5xl font-serif mb-6">
+<section className="py-20 md:py-32 bg-[#1E2A38] text-white text-center">
+<h2 className="text-3xl md:text-5xl font-serif mb-6 px-4">
   Start Your Custom Project
 </h2>
 <p className="text-xl text-gray-300 mb-10">

@@ -35,7 +35,7 @@ import acc2 from '../assets/images/accessories/acc2.jpg';
 import acc5 from '../assets/images/accessories/acc5.jpg';
 
 interface ProjectsProps {
-  onNavigate?: (page: string) => void;
+  onNavigate: (page: string) => void;
 }
 
 export default function Projects({ onNavigate }: ProjectsProps) {
@@ -81,10 +81,10 @@ export default function Projects({ onNavigate }: ProjectsProps) {
 
   return (
     <div className="min-h-screen pt-20 bg-[#F5F6F7]">
-      <section className="py-16 bg-white border-b border-gray-200">
+      <section className="py-10 md:py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#1E2A38] mb-4">
+            <h1 className="text-3xl md:text-6xl font-serif font-bold text-[#1E2A38] mb-4">
               Our Portfolio
             </h1>
             <p className="text-xl text-gray-600">
@@ -110,7 +110,7 @@ export default function Projects({ onNavigate }: ProjectsProps) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
@@ -149,9 +149,9 @@ export default function Projects({ onNavigate }: ProjectsProps) {
         </div>
       </section>
 
-      <section className="py-24 bg-[#1E2A38]">
+      <section className="py-12 md:py-24 bg-[#1E2A38]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
             Have a Project in Mind?
           </h2>
           <p className="text-xl text-gray-300 mb-8">

@@ -39,16 +39,16 @@ function App() {
         return <LandingDemo onNavigate={handleNavigate} />;
 
       case 'home':
-        return <Home />;
+        return <Home onNavigate={handleNavigate} />;
 
       case 'about':
-        return <About />;
+        return <About onNavigate={handleNavigate} />;
 
       case 'projects':
-        return <Projects />;
+        return <Projects onNavigate={handleNavigate} />;
 
       case 'contact':
-        return <Contact />;
+        return <Contact onNavigate={handleNavigate} />;
 
       case 'gallery':
         return <Gallery onNavigate={handleNavigate} />;
