@@ -203,6 +203,8 @@ export default function About({ onNavigate }: AboutProps) {
             Let's Create Something Extraordinary
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Whether you're an architect with a bold vision or a homeowner seeking a unique statement piece, we're ready to bring your ideas to life.
+          </p>
           <button
             onClick={() => onNavigate("contact")}
             className="bg-[#C9A45C] px-10 py-4 text-sm uppercase tracking-widest hover:bg-white hover:text-[#1E2A38] transition text-white font-semibold"
