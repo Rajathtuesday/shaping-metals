@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -80,7 +80,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="#"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A45C] flex items-center justify-center transition-colors"
               >
-                <Linkedin size={18} />
+                <Youtube size={18} />
               </a>
             </div>
           </div>

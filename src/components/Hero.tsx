@@ -4,6 +4,10 @@ import { ArrowRight, ChevronDown, Play } from "lucide-react";
 import img1 from "../assets/images/gates/gate1.jpg";
 import img2 from "../assets/images/railings/railing4.jpg";
 import img3 from "../assets/images/murals/mural2.jpg";
+
+import img1Mobile from "../assets/images/gates/gate2.jpg";
+import img2Mobile from "../assets/images/railings/railing3.jpg";
+import img3Mobile from "../assets/images/murals/mural3.jpg";
 interface HeroProps {
   onNavigate: (page: string) => void;
 }
@@ -38,18 +42,21 @@ export default function Hero({ onNavigate }: HeroProps) {
   const heroSlides = [
     {
       image: img1,
+      mobileImage: img1Mobile,
       title: "Artistry in Metal",
       subtitle: "Bespoke Creations",
       description: "Where timeless craftsmanship meets contemporary design",
     },
     {
       image: img2,
+      mobileImage: img2Mobile,
       title: "Timeless Elegance",
       subtitle: "Architectural Excellence",
       description: "Transforming spaces with sculptural metal masterpieces",
     },
     {
       image: img3,
+      mobileImage: img3Mobile,
       title: "Sculpted Luxury",
       subtitle: "Masterful Craftsmanship",
       description: "Heritage techniques refined for modern sophistication",
@@ -88,7 +95,12 @@ export default function Hero({ onNavigate }: HeroProps) {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="hidden md:block w-full h-full object-cover"
+            />
+            <img
+              src={slide.mobileImage}
+              alt={slide.title}
+              className="block md:hidden w-full h-full object-cover"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />

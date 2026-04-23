@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Send } from 'lucide-react';
 import contactHero from '../assets/images/gates/gate11.jpg';
 
 export default function Contact() {
@@ -129,7 +129,7 @@ export default function Contact() {
                     href="#"
                     className="w-12 h-12 rounded-full bg-[#ECEDEF] hover:bg-[#C9A45C] flex items-center justify-center transition-colors group"
                   >
-                    <Linkedin className="text-[#1E2A38] group-hover:text-white transition-colors" size={20} />
+                    <Youtube className="text-[#1E2A38] group-hover:text-white transition-colors" size={20} />
                   </a>
                 </div>
               </div>
