@@ -65,19 +65,25 @@ export default function Footer({ onNavigate }: FooterProps) {
             </h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/shapingmetals/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A45C] flex items-center justify-center transition-colors"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61581741280432"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A45C] flex items-center justify-center transition-colors"
               >
                 <Facebook size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/channel/UCM_deZu5zZvK5GVa2mThI0w"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A45C] flex items-center justify-center transition-colors"
               >
                 <Youtube size={18} />

@@ -118,19 +118,25 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <h3 className="font-semibold text-[#1E2A38] mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/shapingmetals/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-[#ECEDEF] hover:bg-[#C9A45C] flex items-center justify-center transition-colors group"
                   >
                     <Instagram className="text-[#1E2A38] group-hover:text-white transition-colors" size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61581741280432"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-[#ECEDEF] hover:bg-[#C9A45C] flex items-center justify-center transition-colors group"
                   >
                     <Facebook className="text-[#1E2A38] group-hover:text-white transition-colors" size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.youtube.com/channel/UCM_deZu5zZvK5GVa2mThI0w"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-[#ECEDEF] hover:bg-[#C9A45C] flex items-center justify-center transition-colors group"
                   >
                     <Youtube className="text-[#1E2A38] group-hover:text-white transition-colors" size={20} />
