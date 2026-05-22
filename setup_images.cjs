@@ -26,7 +26,15 @@ async function run() {
     if (!fs.existsSync(srcPath)) { console.warn(`MISSING: ${item.src}`); continue; }
     try {
       const buf = fs.readFileSync(srcPath);
-      await sharp(buf).resize({ width: 1400, withoutEnlargement: true }).jpeg({ quality: 82, progressive: true }).toFile(destPath);
+      let image = sharp(buf);
+      const meta = await image.metadata();
+      if (meta.width && meta.height && meta.width > meta.height) {
+        image = image.rotate(90);
+      }
+      await image
+        .resize({ width: 1400, withoutEnlargement: true })
+        .jpeg({ quality: 82, progressive: true })
+        .toFile(destPath);
       console.log(`✓ ${item.folder}/${item.name}  (${Math.round(fs.statSync(destPath).size/1024)} KB)`);
     } catch (e) { console.error(`✗ ${item.src}:`, e.message); }
   }
