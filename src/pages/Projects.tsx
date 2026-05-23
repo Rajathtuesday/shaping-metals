@@ -34,11 +34,17 @@ import acc1 from '../assets/images/accessories/acc1.jpg';
 import acc2 from '../assets/images/accessories/acc2.jpg';
 import acc5 from '../assets/images/accessories/acc5.jpg';
 
+import { useSEO } from '../hooks/useSEO';
+
 interface ProjectsProps {
   onNavigate: (page: string) => void;
 }
 
 export default function Projects({ onNavigate }: ProjectsProps) {
+  useSEO({
+    title: "Our Metalwork Portfolio",
+    description: "Explore our collection of bespoke metalwork projects including gates, railings, murals, and architectural installations across India."
+  });
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = ['all', 'gates', 'railings', 'murals', 'accessories', 'installations'];

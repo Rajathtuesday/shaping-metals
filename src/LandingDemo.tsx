@@ -1,8 +1,13 @@
 import img1 from "./assets/images/gates/gate1.jpg";
 import img2 from "./assets/images/gates/gate4.jpg";
 import img3 from "./assets/images/murals/mural1.jpg";
+import { useSEO } from "./hooks/useSEO";
 
 export default function LandingDemo({ onNavigate }: any) {
+  useSEO({
+    title: "Luxury Metal Art & Bespoke Design Studio",
+    description: "Shaping Metals: Custom metal installations for architects and interior designers. Bespoke metal design for luxury residences and commercial spaces across India."
+  });
 
   return (
     <div className="bg-black text-white font-body">

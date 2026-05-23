@@ -128,7 +128,13 @@ const categories = [
   },
 ];
 
+import { useSEO } from "../hooks/useSEO";
+
 export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
+  useSEO({
+    title: "Royal Gallery - Metal Masterpieces",
+    description: "Explore our Royal Gallery featuring majestic entrance gates, elegant railings, wall murals, and bespoke metal accessories."
+  });
   const [activeCategory, setActiveCategory] = useState(initialCategory || "gates");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);

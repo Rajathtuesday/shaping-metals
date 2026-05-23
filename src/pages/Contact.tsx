@@ -2,11 +2,17 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Send } from 'lucide-react';
 import contactHero from '../assets/images/gates/gate11.jpg';
 
+import { useSEO } from '../hooks/useSEO';
+
 interface ContactProps {
   onNavigate: (page: string) => void;
 }
 
 export default function Contact({ onNavigate }: ContactProps) {
+  useSEO({
+    title: "Contact Us for Your Project",
+    description: "Get in touch with Shaping Metals for bespoke metal fabrication inquiries. We handle projects across South India and beyond."
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

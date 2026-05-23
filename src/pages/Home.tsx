@@ -20,11 +20,17 @@ import proj5 from "../assets/images/projects/proj5.jpg";
 
 import aboutImg from "../assets/images/about/about1.jpg";
 
+import { useSEO } from "../hooks/useSEO";
+
 interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
+  useSEO({
+    title: "Luxury Metal Art & Bespoke Fabrication",
+    description: "Premium bespoke metal gates, railings, murals, and architectural design elements for luxury residential and commercial spaces across South India."
+  });
 
 const collections = [slide1, slide2, slide3, slide4, slide5];
 

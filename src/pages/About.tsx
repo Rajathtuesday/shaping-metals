@@ -6,11 +6,17 @@ import craft2 from '../assets/images/murals/mural2.jpg';
 import about1 from '../assets/images/about/about2.jpg';
 import about2 from '../assets/images/about/about4.jpg';
 
+import { useSEO } from '../hooks/useSEO';
+
 interface AboutProps {
   onNavigate: (page: string) => void;
 }
 
 export default function About({ onNavigate }: AboutProps) {
+  useSEO({
+    title: "About Our Craftsmanship",
+    description: "Learn about Shaping Metals' history since 2010. Our master craftsmen combine traditional metalworking techniques with modern engineering to create bespoke art."
+  });
   const values = [
     {
       icon: Target,
