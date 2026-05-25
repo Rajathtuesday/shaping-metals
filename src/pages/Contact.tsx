@@ -92,7 +92,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1E2A38] mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 98480 00000</p>
+                    <p className="text-gray-600">+91 6362843722</p>
                     <p className="text-sm text-gray-500">Mon-Sat 9am-7pm IST</p>
                   </div>
                 </div>
@@ -113,9 +113,9 @@ export default function Contact({ onNavigate }: ContactProps) {
                     <MapPin className="text-white" size={20} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1E2A38] mb-1">Studio</h3>
-                    <p className="text-gray-600">Industrial Area, Nacharam</p>
-                    <p className="text-gray-600">Hyderabad, Telangana 500076</p>
+                    <h3 className="font-semibold text-[#1E2A38] mb-1">220/15/1, 5th Cross Rd, 8th Main,</h3>
+                    <p className="text-gray-600">2nd Block, Jaya Nagar East, Jayanagar,</p>
+                    <p className="text-gray-600">Bengaluru, Karnataka 560011</p>
                   </div>
                 </div>
               </div>
