@@ -41,7 +41,7 @@ export default function About({ onNavigate }: AboutProps) {
   ];
 
   const expertise = [
-    { number: '25+', label: 'Years Experience' },
+    { number: '6+', label: 'Years Experience' },
     { number: '500+', label: 'Projects Completed' },
     { number: '15', label: 'Master Craftsmen' },
     { number: '100%', label: 'Client Satisfaction' },

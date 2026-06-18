@@ -29,12 +29,26 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-20">
           
           {/* LOGO - ALWAYS VISIBLE */}
-          <img
-            src={logo}
-            alt="logo"
-            className="h-12 md:h-16 object-contain cursor-pointer"
-            onClick={() => handleClick("home")}
-          />
+<div
+  className="flex items-center gap-3 cursor-pointer"
+  onClick={() => handleClick("home")}
+>
+  <img
+    src={logo}
+    alt="logo"
+    className="h-12 md:h-16 object-contain"
+  />
+
+  <div className="hidden sm:block">
+    <h1 className="text-[#C9A45C] font-serif text-lg md:text-2xl tracking-wide">
+      SHAPING METALS
+    </h1>
+
+    <p className="text-white/70 text-[10px] md:text-xs uppercase tracking-[0.2em]">
+      Artistry In Metal
+    </p>
+  </div>
+</div>
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center gap-8">
