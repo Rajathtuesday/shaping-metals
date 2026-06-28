@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import IntroAnimation from "../components/IntroAnimation";
 import { Autoplay } from "swiper/modules";
 import Hero from "../components/Hero";
 
@@ -27,6 +29,16 @@ interface HomeProps {
 }
 
 export default function Home({ onNavigate }: HomeProps) {
+
+const [showIntro, setShowIntro] = useState(true);
+const [pageVisible, setPageVisible] = useState(false);
+
+useEffect(() => {
+  if (!showIntro) {
+    setPageVisible(true);
+  }
+}, [showIntro]);
+
   useSEO({
     title: "Luxury Metal Art & Bespoke Fabrication",
     description: "Premium bespoke metal gates, railings, murals, and architectural design elements for luxury residential and commercial spaces across South India."
@@ -42,8 +54,28 @@ const projects = [
   { image: proj5, title: "Vizag | Andhra Pradesh" },
 ];
 
+if (showIntro) {
+  return (
+    <IntroAnimation
+      onComplete={() => {
+        setShowIntro(false);
+      }}
+    />
+  );
+}
+
 return (
-<div className="bg-white text-primary-navy">
+<div
+  className={`
+    bg-white text-primary-navy
+    transition-all duration-[1500ms] ease-out
+    ${
+      pageVisible
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 translate-y-10"
+    }
+  `}
+>
 
 {/* HERO SECTION */}
 <Hero onNavigate={onNavigate} />
@@ -146,18 +178,15 @@ return (
     }}
   >
     {projects.map((project, index) => (
-      <SwiperSlide key={index}>
-        <div className="text-center">
-          <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <img
-              src={project.image}
-              className="h-[300px] w-full object-cover hover:scale-110 transition duration-700"
-              alt={project.title}
-            />
-          </div>
-          <p className="mt-4 text-sm text-gray-700 font-medium">{project.title}</p>
-        </div>
-      </SwiperSlide>
+<SwiperSlide key={index}>
+  <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+    <img
+      src={project.image}
+      className="h-[300px] w-full object-cover hover:scale-110 transition duration-700"
+      alt="Project"
+    />
+  </div>
+</SwiperSlide>
     ))}
   </Swiper>
 </div>
