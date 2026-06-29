@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import IntroAnimation from "../components/IntroAnimation";
 import { Autoplay } from "swiper/modules";
 import Hero from "../components/Hero";
+<link rel="icon" type="image/png" href="/logo.png" />
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,7 +20,6 @@ import proj2 from "../assets/images/projects/proj2.jpg";
 import proj3 from "../assets/images/projects/proj3.jpg";
 import proj4 from "../assets/images/projects/proj4.jpg";
 import proj5 from "../assets/images/projects/proj5.jpg";
-
 import aboutImg from "../assets/images/about/about1.jpg";
 
 import { useSEO } from "../hooks/useSEO";

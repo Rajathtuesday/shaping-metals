@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo/logo.png";
 
+
 interface NavbarProps {
   currentPage: string;
   onNavigate: (page: string) => void;

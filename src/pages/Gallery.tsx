@@ -42,6 +42,7 @@ import proj7 from "../assets/images/projects/proj7.jpg";
 import proj8 from "../assets/images/projects/proj8.jpg";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+<link rel="icon" type="image/png" href="/logo.png" />
 
 interface GalleryProps {
   onNavigate: (page: string) => void;
@@ -54,18 +55,18 @@ const categories = [
     name: "Royal Gates & Main Doors",
     description: "Majestic entrance gates and main doors crafted with precision metalwork",
     images: [
-      { src: img1, title: "Grand Main Door", location: "Hyderabad" },
-      { src: img2, title: "Heritage Entrance Door", location: "Bangalore" },
-      { src: img3, title: "Classic Steel Gate", location: "Chennai" },
-      { src: img4, title: "Full-Panel Royal Gate", location: "Mumbai" },
-      { src: img5, title: "Ornamental Main Door", location: "Hyderabad" },
-      { src: img6, title: "Designer Entry Gate", location: "Vizag" },
-      { src: img7, title: "Premium Wrought Gate", location: "Pune" },
-      { src: img8, title: "Steel Artisan Door", location: "Delhi" },
-      { src: img9, title: "Arc Designed Entry", location: "Bangalore" },
-      { src: img10, title: "Luxury Main Door", location: "Hyderabad" },
-      { src: img11, title: "Heritage Gate Design", location: "Chennai" },
-      { src: img12, title: "Premium Gate Series", location: "Mumbai" },
+      { src: img1, title: "Grand Main Door" },
+      { src: img2, title: "Heritage Entrance Door"},
+      { src: img3, title: "Classic Steel Gate"},
+      { src: img4, title: "Full-Panel Royal Gate"},
+      { src: img5, title: "Ornamental Main Door"},
+      { src: img6, title: "Designer Entry Gate"},
+      { src: img7, title: "Premium Wrought Gate"},
+      { src: img8, title: "Steel Artisan Door"},
+      { src: img9, title: "Arc Designed Entry"},
+      { src: img10, title: "Luxury Main Door"},
+      { src: img11, title: "Heritage Gate Design"},
+      { src: img12, title: "Premium Gate Series"},
     ],
   },
   {
@@ -73,14 +74,14 @@ const categories = [
     name: "Elegant Railings & Handles",
     description: "Sophisticated railings, handles and balustrades for staircases and balconies",
     images: [
-      { src: railing1, title: "Ornamental Staircase Railing", location: "Hyderabad" },
-      { src: railing2, title: "Minimalist Handle Series", location: "Bangalore" },
-      { src: railing3, title: "Classic Wrought Iron Railing", location: "Delhi" },
-      { src: railing4, title: "Premium Steel Balustrade", location: "Mumbai" },
-      { src: railing5, title: "Designer Handle Collection", location: "Chennai" },
-      { src: railing6, title: "Ornate Balcony Railing", location: "Pune" },
-      { src: railing7, title: "Modern Stair Railing", location: "Vizag" },
-      { src: railing8, title: "Art Deco Railing", location: "Kolkata" },
+      { src: railing1, title: "Ornamental Staircase Railing"},
+      { src: railing2, title: "Minimalist Handle Series"},
+      { src: railing3, title: "Classic Wrought Iron Railing"},
+      { src: railing4, title: "Premium Steel Balustrade"},
+      { src: railing5, title: "Designer Handle Collection"},
+      { src: railing6, title: "Ornate Balcony Railing" },
+      { src: railing7, title: "Modern Stair Railing"},
+      { src: railing8, title: "Art Deco Railing"},
     ],
   },
   {
@@ -88,12 +89,12 @@ const categories = [
     name: "Wall Murals",
     description: "Artistic metal wall murals that transform interiors into stunning art spaces",
     images: [
-      { src: mural1, title: "Nature Inspired Wall Mural", location: "Hyderabad" },
-      { src: mural2, title: "Heritage Metal Artwork", location: "Bangalore" },
-      { src: mural3, title: "Abstract Metal Mural", location: "Mumbai" },
-      { src: mural4, title: "Textured Bronze Mural", location: "Chennai" },
-      { src: mural5, title: "Contemporary Relief Panel", location: "Delhi" },
-      { src: mural6, title: "Copper Feature Wall", location: "Hyderabad" },
+      { src: mural1, title: "Nature Inspired Wall Mural"},
+      { src: mural2, title: "Heritage Metal Artwork"},
+      { src: mural3, title: "Abstract Metal Mural" },
+      { src: mural4, title: "Textured Bronze Mural" },
+      { src: mural5, title: "Contemporary Relief Panel"},
+      { src: mural6, title: "Copper Feature Wall"},
     ],
   },
   {
@@ -101,14 +102,14 @@ const categories = [
     name: "Metal Accessories",
     description: "Bespoke decorative metal accessories and statement pieces",
     images: [
-      { src: acc1, title: "Designer Metal Accessory", location: "Hyderabad" },
-      { src: acc2, title: "Premium Metal Accent", location: "Bangalore" },
-      { src: acc3, title: "Ornamental Piece", location: "Mumbai" },
-      { src: acc4, title: "Handcrafted Accent", location: "Chennai" },
-      { src: acc5, title: "Statement Metal Work", location: "Pune" },
-      { src: acc6, title: "Decorative Element", location: "Delhi" },
-      { src: acc7, title: "Metal Craft Piece", location: "Vizag" },
-      { src: acc8, title: "Artisan Accessory", location: "Kolkata" },
+      { src: acc1, title: "Designer Metal Accessory"},
+      { src: acc2, title: "Premium Metal Accent"},
+      { src: acc3, title: "Ornamental Piece" },
+      { src: acc4, title: "Handcrafted Accent" },
+      { src: acc5, title: "Statement Metal Work" },
+      { src: acc6, title: "Decorative Element" },
+      { src: acc7, title: "Metal Craft Piece"},
+      { src: acc8, title: "Artisan Accessory" },
     ],
   },
   {
@@ -116,14 +117,14 @@ const categories = [
     name: "Project Installations",
     description: "Premium completed installations across landmark residences and commercial spaces",
     images: [
-      { src: proj1, title: "Residential Villa Gate", location: "Hyderabad" },
-      { src: proj2, title: "Heritage Bungalow Entry", location: "Bangalore" },
-      { src: proj3, title: "Estate Installation", location: "Chennai" },
-      { src: proj4, title: "Corporate Lobby Feature", location: "Mumbai" },
-      { src: proj5, title: "Premium Residence Project", location: "Hyderabad" },
-      { src: proj6, title: "Luxury Apartment Work", location: "Pune" },
-      { src: proj7, title: "Commercial Installation", location: "Delhi" },
-      { src: proj8, title: "Site Metalwork", location: "Vizag" },
+      { src: proj1, title: "Residential Villa Gate" },
+      { src: proj2, title: "Heritage Bungalow Entry" },
+      { src: proj3, title: "Estate Installation" },
+      { src: proj4, title: "Corporate Lobby Feature"},
+      { src: proj5, title: "Premium Residence Project"},
+      { src: proj6, title: "Luxury Apartment Work" },
+      { src: proj7, title: "Commercial Installation" },
+      { src: proj8, title: "Site Metalwork"},
     ],
   },
 ];
@@ -235,7 +236,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <p className="text-primary-gold text-xs uppercase tracking-[0.3em] mb-2 font-sans">
-                    {image.location}
+                    {/* {image.location} */}
                   </p>
                   <h3 className="text-white font-serif text-2xl">{image.title}</h3>
                 </div>
@@ -317,7 +318,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
             />
             <div className="text-center mt-8">
               <p className="text-primary-gold text-sm uppercase tracking-[0.3em] mb-2">
-                {currentCategory.images[lightboxIndex].location}
+                {/* {currentCategory.images[lightboxIndex].location} */}
               </p>
               <h3 className="text-white font-serif text-2xl">
                 {currentCategory.images[lightboxIndex].title}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Send } from 'lucide-react';
 import contactHero from '../assets/images/gates/gate11.jpg';
+<link rel="icon" type="image/png" href="/logo.png" />
 
 import { useSEO } from '../hooks/useSEO';
 
@@ -53,7 +54,7 @@ export default function Contact({ onNavigate }: ContactProps) {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -61,7 +62,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             alt="Contact Us"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#1E2A38]/80" />
+          <div className="absolute inset-0 bg-black/35" />
         </div>
 
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
@@ -267,7 +268,7 @@ export default function Contact({ onNavigate }: ContactProps) {
 
       <section className="h-[400px] bg-gray-200">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.534!2d78.5518!3d17.4065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI0JzIzLjQiTiA3OMKwMzMnMDYuNSJF!5e0!3m2!1sen!2sin!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4779565346466!2d77.5829493!3d12.941239000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15a68d3dd1bd%3A0xa248755fdd689c6e!2sShaping%20Metals!5e0!3m2!1sen!2sin!4v1782552296736!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}

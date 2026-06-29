@@ -1,10 +1,11 @@
 import { Target, Users, Lightbulb, Hammer } from 'lucide-react';
+<link rel="icon" type="image/png" href="/logo.png" />
 import heroImg from '../assets/images/gates/gate9.jpg';
 import storyImg from '../assets/images/gates/gate10.jpg';
-import craft1 from '../assets/images/railings/railing4.jpg';
-import craft2 from '../assets/images/murals/mural2.jpg';
-import about1 from '../assets/images/about/about2.jpg';
-import about2 from '../assets/images/about/about4.jpg';
+import craft1 from '../assets/images/MD 3 Template/MD 2 Template.jpg';
+import craft2 from '../assets/images/Partition Grills 3 Template/Partition Grills 2 Template.jpg';
+import about1 from '../assets/images/miror 3 Template/miror 2 Template.jpg';
+import about2 from '../assets/images/Vaskal 3 Template/Vaskal 2 Template.jpg';
 
 import { useSEO } from '../hooks/useSEO';
 
@@ -48,7 +49,7 @@ export default function About({ onNavigate }: AboutProps) {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -79,7 +80,7 @@ export default function About({ onNavigate }: AboutProps) {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Founded in 2010, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
+                Founded in 2020, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects — from luxury residences in Hyderabad and Bangalore to commercial spaces in Mumbai and Delhi — each one pushing us to refine our craft further.
