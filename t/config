@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "shaping-metals"]
+	url = https://github.com/Rajathtuesday/shaping-metals
+	fetch = +refs/heads/*:refs/remotes/shaping-metals/*
