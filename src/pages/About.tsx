@@ -83,10 +83,10 @@ export default function About({ onNavigate }: AboutProps) {
                 Founded in 2020, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects — from luxury residences in Hyderabad and Bangalore to commercial spaces in Mumbai and Delhi — each one pushing us to refine our craft further.
+                Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects across PAN India, from luxury residences to commercial spaces, with each project pushing us to refine our craft further.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Today, we combine traditional metalworking techniques with modern engineering, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal — we sculpt, we engineer, we create lasting impressions.
+                Today, we combine traditional metalworking techniques with modern engineering, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal; we sculpt, we engineer, and we create lasting impressions.
               </p>
             </div>
 
